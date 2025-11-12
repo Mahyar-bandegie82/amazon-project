@@ -1,5 +1,6 @@
 import { addProductToCart, cart } from "../data/cart.js"
 import { products } from "../data/products.js"
+import { Money } from "./utils/money.js";
 
 let products_string = ''
 
@@ -24,7 +25,7 @@ products.forEach((product) => {
           </div>
 
           <div class="product-price">
-            $${product.priceCents / 100}
+            $${Money(product.priceCents)}
           </div>
 
           <div class="product-quantity-container">
