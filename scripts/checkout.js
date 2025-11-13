@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js";
+import { cart , removeProduct } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { Money } from "./utils/money.js";
 
@@ -12,7 +12,7 @@ cart.forEach((product_incart) => {
     })
 
     checkoutHtml += `
-        <div class="cart-item-container">
+        <div class="cart-item-container js-cart-item-container" data-delete="${matchingItem.id}">
             <div class="delivery-date">
                 Delivery date: Tuesday, June 21
             </div>
@@ -34,7 +34,7 @@ cart.forEach((product_incart) => {
                         <span class="update-quantity-link link-primary">
                             Update
                         </span>
-                        <span class="delete-quantity-link link-primary">
+                        <span class="delete-quantity-link link-primary js-delete" data-delete="${matchingItem.id}">
                             Delete
                         </span>
                     </div>
@@ -84,4 +84,35 @@ cart.forEach((product_incart) => {
 
 })
 
+
+
 document.querySelector('.js-order-summary').innerHTML = checkoutHtml
+//my code
+document.querySelectorAll('.js-delete').forEach((btn)=>{
+    btn.addEventListener('click', ()=>{
+        removeProduct(btn.dataset.delete)
+    })
+})
+
+
+//ai code
+// document.querySelectorAll('.js-delete').forEach((btn) => {
+//     btn.addEventListener('click', () => {
+//         const productIdToDelete = btn.dataset.delete;
+
+//         // Remove from cart array
+//         const index = cart.findIndex((item) => {
+//             return item.productId === productIdToDelete
+//         });
+//         if (index !== -1) {
+//             cart.splice(index, 1);
+//         }
+
+//         // Remove the correct DOM element
+//         const container = btn.closest('.js-cart-item-container');
+//         if (container) {
+//             container.remove();
+//         }
+//     });
+// });
+
