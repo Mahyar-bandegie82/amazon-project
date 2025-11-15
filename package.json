@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.19"
+
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0" 
+  }
+}

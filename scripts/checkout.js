@@ -1,7 +1,10 @@
 import { cart , removeProduct } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { Money } from "./utils/money.js";
+import dayjs from 'dayjs';
 
+const now = dayjs();
+console.log(now.format());
 let checkoutHtml = ''
 
 cart.forEach((product_incart) => {
