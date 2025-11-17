@@ -1,6 +1,11 @@
 import { cart , removeProduct } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { Money } from "./utils/money.js";
+import dayjs from "dayjs";
+
+const today = dayjs();
+const deleverydate = today.add(7, 'day').format('dddd, MMMM D');
+console.log(deleverydate);
 
 let checkoutHtml = '';
 
@@ -84,7 +89,9 @@ cart.forEach((product_incart) => {
 
 })
 
-
+function deliveryopt(){
+    
+}
 
 document.querySelector('.js-order-summary').innerHTML = checkoutHtml
 //my code

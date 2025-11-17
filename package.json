@@ -4,9 +4,15 @@
   },
   "dependencies": {
     "dayjs": "^1.11.19"
-
   },
   "devDependencies": {
-    "parcel": "^2.12.0" 
-  }
+    "parcel": "^2.16.1"
+  },
+  "name": "javascript-amazon-project",
+  "version": "1.0.0",
+  "description": "",
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

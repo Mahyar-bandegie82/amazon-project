@@ -18,13 +18,12 @@ export function addProductToCart(productId) {
         matchingProduct.quantity += 1;
     }
     else {
-
         cart.push({
             productId: productId,
-            quantity: 1
+            quantity: 1,
+			deliveryOptions: "1"
         })
     }
-
     putCartIn();
 }
 

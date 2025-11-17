@@ -4,6 +4,22 @@ import { Money } from "./utils/money.js";
 
 let products_string = ''
 
+// amazon.js or a separate ratings.js helper
+const ratingImages = {
+  0: new URL("../images/ratings/rating-0.png", import.meta.url).href,
+  5: new URL("../images/ratings/rating-05.png", import.meta.url).href,
+  10: new URL("../images/ratings/rating-10.png", import.meta.url).href,
+  15: new URL("../images/ratings/rating-15.png", import.meta.url).href,
+  20: new URL("../images/ratings/rating-20.png", import.meta.url).href,
+  25: new URL("../images/ratings/rating-25.png", import.meta.url).href,
+  30: new URL("../images/ratings/rating-30.png", import.meta.url).href,
+  35: new URL("../images/ratings/rating-35.png", import.meta.url).href,
+  40: new URL("../images/ratings/rating-40.png", import.meta.url).href,
+  45: new URL("../images/ratings/rating-45.png", import.meta.url).href,
+  50: new URL("../images/ratings/rating-50.png", import.meta.url).href,
+};
+
+
 products.forEach((product) => {
     products_string = products_string + `
         <div class="product-container">
@@ -18,7 +34,7 @@ products.forEach((product) => {
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${product.rating.stars * 10}.png">
+              src="${ratingImages[product.rating.stars * 10]}">
             <div class="product-rating-count link-primary">
               ${product.rating.count}
             </div>
