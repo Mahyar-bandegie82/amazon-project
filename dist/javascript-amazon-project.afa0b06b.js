@@ -806,6 +806,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "cart", ()=>cart);
 parcelHelpers.export(exports, "addProductToCart", ()=>addProductToCart);
 parcelHelpers.export(exports, "removeProduct", ()=>removeProduct);
+parcelHelpers.export(exports, "saveDeliveryInfo", ()=>saveDeliveryInfo);
 let cart = JSON.parse(localStorage.getItem('cart'));
 if (!JSON.parse(localStorage.getItem('cart'))) {
     cart = [];
@@ -839,6 +840,15 @@ function removeProduct(productId) {
         });
     });
     putCartIn();
+}
+function saveDeliveryInfo(productId) {
+    cart.forEach((product)=>{
+        if (product.productId === productId) {
+            const selectedOption = document.querySelector(`input[name="delivery-option-${productId}"]:checked`).value;
+            product.deliveryOption = selectedOption;
+            putCartIn();
+        }
+    });
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {

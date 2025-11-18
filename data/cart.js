@@ -44,3 +44,13 @@ export function removeProduct(productId) {
     })
     putCartIn()
 }
+
+export function saveDeliveryInfo(productId){
+    cart.forEach((product) => {
+        if (product.productId === productId){
+            const selectedOption = document.querySelector(`input[name="delivery-option-${productId}"]:checked`).value;
+            product.deliveryOption = selectedOption;
+            putCartIn();
+        }
+    })
+}
