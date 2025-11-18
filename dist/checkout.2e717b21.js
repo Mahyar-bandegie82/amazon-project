@@ -718,21 +718,24 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _cartJs = require("../data/cart.js");
 var _productsJs = require("../data/products.js");
 var _moneyJs = require("./utils/money.js");
+var _deliveryoptionsJs = require("../data/deliveryoptions.js");
 var _dayjs = require("dayjs");
 var _dayjsDefault = parcelHelpers.interopDefault(_dayjs);
-const today = (0, _dayjsDefault.default)();
-const deleverydate = today.add(7, 'day').format('dddd, MMMM D');
-console.log(deleverydate);
 let checkoutHtml = '';
 (0, _cartJs.cart).forEach((product_incart)=>{
     let productId = product_incart.productId;
     let matchingItem = (0, _productsJs.products).find((product)=>{
         return product.id === productId;
     });
+    let deliveryOPTid = (0, _deliveryoptionsJs.deliveryOptions).find((item)=>{
+        return item.deliveryId === product_incart.deliveryOption;
+    });
+    const today = (0, _dayjsDefault.default)();
+    const deliveryDate = today.add(deliveryOPTid.deliveryDays, 'day').format('dddd, MMMM D');
     checkoutHtml += `
         <div class="cart-item-container js-cart-item-container" data-delete="${matchingItem.id}">
             <div class="delivery-date">
-                Delivery date: Tuesday, June 21
+                Delivery date: ${deliveryDate}
             </div>
 
             <div class="cart-item-details-grid">
@@ -762,45 +765,38 @@ let checkoutHtml = '';
                     <div class="delivery-options-title">
                         Choose a delivery option:
                     </div>
-                    <div class="delivery-option">
-                        <input type="radio" checked class="delivery-option-input" name="delivery-option-${matchingItem.id}">
-                        <div>
-                            <div class="delivery-option-date">
-                                Tuesday, June 21
-                            </div>
-                            <div class="delivery-option-price">
-                                FREE Shipping
-                            </div>
-                        </div>
-                    </div>
-                    <div class="delivery-option">
-                        <input type="radio" class="delivery-option-input" name="delivery-option-${matchingItem.id}">
-                        <div>
-                            <div class="delivery-option-date">
-                                Wednesday, June 15
-                            </div>
-                            <div class="delivery-option-price">
-                                $4.99 - Shipping
-                            </div>
-                        </div>
-                    </div>
-                    <div class="delivery-option">
-                        <input type="radio" class="delivery-option-input" name="delivery-option-${matchingItem.id}">
-                        <div>
-                            <div class="delivery-option-date">
-                                Monday, June 13
-                            </div>
-                            <div class="delivery-option-price">
-                                $9.99 - Shipping
-                            </div>
-                        </div>
-                    </div>
+                    ${deliveryopt(matchingItem, (0, _cartJs.cart))}
                 </div>
             </div>
         </div>
     `;
 });
-function deliveryopt() {}
+function deliveryopt(matchingItem, cart) {
+    let delopt = '';
+    (0, _deliveryoptionsJs.deliveryOptions).forEach((option)=>{
+        const today = (0, _dayjsDefault.default)();
+        const deliveryDate = today.add(option.deliveryDays, 'day').format('dddd, MMMM D');
+        const deliveryPrice = option.priceCents === 0 ? 'FREE Shipping' : `$${(0, _moneyJs.Money)(option.priceCents)} - Shipping`;
+        const isChecked = cart.find((item)=>{
+            return item.deliveryOption === option.deliveryId;
+        });
+        // const isChecked = cart.deliveryOptions === option.deliveryId;
+        delopt = delopt + `
+            <div class="delivery-option">
+                <input type="radio" ${isChecked ? 'checked' : ''} class="delivery-option-input" name="delivery-option-${matchingItem.id}">
+                <div>
+                    <div class="delivery-option-date">
+                        ${deliveryDate}
+                    </div>
+                    <div class="delivery-option-price">
+                        ${deliveryPrice}
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    return delopt;
+}
 document.querySelector('.js-order-summary').innerHTML = checkoutHtml;
 //my code
 document.querySelectorAll('.js-delete').forEach((btn)=>{
@@ -827,7 +823,7 @@ document.querySelectorAll('.js-delete').forEach((btn)=>{
  // });
 ;
 
-},{"../data/cart.js":"aivgC","../data/products.js":"4sgkT","./utils/money.js":"aBhv2","dayjs":"7jGxJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aivgC":[function(require,module,exports,__globalThis) {
+},{"../data/cart.js":"aivgC","../data/products.js":"4sgkT","./utils/money.js":"aBhv2","dayjs":"7jGxJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../data/deliveryoptions.js":"le6Ya"}],"aivgC":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "cart", ()=>cart);
@@ -849,7 +845,7 @@ function addProductToCart(productId) {
     else cart.push({
         productId: productId,
         quantity: 1,
-        deliveryOptions: "1"
+        deliveryOption: "1"
     });
     putCartIn();
 }
@@ -2049,6 +2045,28 @@ function Money(price) {
     }, O.en = D[g], O.Ls = D, O.p = {}, O;
 });
 
-},{}]},["jJIuQ","dedu1"], "dedu1", "parcelRequire233d", {}, "./", "/")
+},{}],"le6Ya":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "deliveryOptions", ()=>deliveryOptions);
+let deliveryOptions = [
+    {
+        deliveryId: "1",
+        deliveryDays: 7,
+        priceCents: 0
+    },
+    {
+        deliveryId: "2",
+        deliveryDays: 3,
+        priceCents: 499
+    },
+    {
+        deliveryId: "3",
+        deliveryDays: 1,
+        priceCents: 999
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["jJIuQ","dedu1"], "dedu1", "parcelRequire233d", {}, "./", "/")
 
 //# sourceMappingURL=checkout.2e717b21.js.map

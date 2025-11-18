@@ -1,4 +1,4 @@
-const deliveryOptions = [
+export let deliveryOptions = [
     {
         deliveryId: "1",
         deliveryDays : 7,
