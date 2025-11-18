@@ -715,10 +715,48 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"dedu1":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _cartJs = require("../data/cart.js");
-var _productsJs = require("../data/products.js");
-var _moneyJs = require("./utils/money.js");
-var _deliveryoptionsJs = require("../data/deliveryoptions.js");
+var _orderSummeryJs = require("./checkout/orderSummery.js");
+var _orderSummeryJsDefault = parcelHelpers.interopDefault(_orderSummeryJs);
+(0, _orderSummeryJsDefault.default)();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./checkout/orderSummery.js":"dG0Q1"}],"jnFvT":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"dG0Q1":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>orderSummary);
+var _cartJs = require("../../data/cart.js");
+var _productsJs = require("../../data/products.js");
+var _moneyJs = require("../utils/money.js");
+var _deliveryoptionsJs = require("../../data/deliveryoptions.js");
 var _dayjs = require("dayjs");
 var _dayjsDefault = parcelHelpers.interopDefault(_dayjs);
 function orderSummary() {
@@ -834,9 +872,8 @@ function orderSummary() {
 //     });
 // });
 }
-orderSummary();
 
-},{"../data/cart.js":"aivgC","../data/products.js":"4sgkT","./utils/money.js":"aBhv2","dayjs":"7jGxJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../data/deliveryoptions.js":"le6Ya"}],"aivgC":[function(require,module,exports,__globalThis) {
+},{"../../data/cart.js":"aivgC","../../data/products.js":"4sgkT","../../data/deliveryoptions.js":"le6Ya","dayjs":"7jGxJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../utils/money.js":"aBhv2"}],"aivgC":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "cart", ()=>cart);
@@ -887,37 +924,7 @@ function saveDeliveryInfo(productId) {
     });
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"4sgkT":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4sgkT":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "products", ()=>products);
@@ -1708,13 +1715,27 @@ module.exports = module.bundle.resolve("kitchen-paper-towels-30-pack.bc35ad4f.jp
 },{}],"hSrW8":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("men-cozy-fleece-zip-up-hoodie-red.6029dde3.jpg") + "?" + Date.now();
 
-},{}],"aBhv2":[function(require,module,exports,__globalThis) {
+},{}],"le6Ya":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Money", ()=>Money);
-function Money(price) {
-    return (price / 100).toFixed(2);
-}
+parcelHelpers.export(exports, "deliveryOptions", ()=>deliveryOptions);
+let deliveryOptions = [
+    {
+        deliveryId: "1",
+        deliveryDays: 7,
+        priceCents: 0
+    },
+    {
+        deliveryId: "2",
+        deliveryDays: 3,
+        priceCents: 499
+    },
+    {
+        deliveryId: "3",
+        deliveryDays: 1,
+        priceCents: 999
+    }
+];
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7jGxJ":[function(require,module,exports,__globalThis) {
 !function(t, e) {
@@ -2068,27 +2089,13 @@ function Money(price) {
     }, O.en = D[g], O.Ls = D, O.p = {}, O;
 });
 
-},{}],"le6Ya":[function(require,module,exports,__globalThis) {
+},{}],"aBhv2":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "deliveryOptions", ()=>deliveryOptions);
-let deliveryOptions = [
-    {
-        deliveryId: "1",
-        deliveryDays: 7,
-        priceCents: 0
-    },
-    {
-        deliveryId: "2",
-        deliveryDays: 3,
-        priceCents: 499
-    },
-    {
-        deliveryId: "3",
-        deliveryDays: 1,
-        priceCents: 999
-    }
-];
+parcelHelpers.export(exports, "Money", ()=>Money);
+function Money(price) {
+    return (price / 100).toFixed(2);
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["jJIuQ","dedu1"], "dedu1", "parcelRequire233d", {}, "./", "/")
 
