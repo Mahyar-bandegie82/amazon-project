@@ -717,9 +717,12 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _orderSummeryJs = require("./checkout/orderSummery.js");
 var _orderSummeryJsDefault = parcelHelpers.interopDefault(_orderSummeryJs);
+var _paymentSummeryJs = require("./checkout/paymentSummery.js");
+var _paymentSummeryJsDefault = parcelHelpers.interopDefault(_paymentSummeryJs);
 (0, _orderSummeryJsDefault.default)();
+(0, _paymentSummeryJsDefault.default)();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./checkout/orderSummery.js":"dG0Q1"}],"jnFvT":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./checkout/orderSummery.js":"dG0Q1","./checkout/paymentSummery.js":"hGLsy"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -2095,6 +2098,53 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Money", ()=>Money);
 function Money(price) {
     return (price / 100).toFixed(2);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hGLsy":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>renderPriceSummary);
+let priceHtml = '';
+function renderPriceSummary() {
+    function price_grid() {
+        priceHtml = priceHtml + `
+            <div class="payment-summary-title">
+                    Order Summary
+                </div>
+
+                <div class="payment-summary-row">
+                    <div>Items (3):</div>
+                    <div class="payment-summary-money">$42.75</div>
+                </div>
+
+                <div class="payment-summary-row">
+                    <div>Shipping &amp; handling:</div>
+                    <div class="payment-summary-money">$4.99</div>
+                </div>
+
+                <div class="payment-summary-row subtotal-row">
+                    <div>Total before tax:</div>
+                    <div class="payment-summary-money">$47.74</div>
+                </div>
+
+                <div class="payment-summary-row">
+                    <div>Estimated tax (10%):</div>
+                    <div class="payment-summary-money">$4.77</div>
+                </div>
+
+                <div class="payment-summary-row total-row">
+                    <div>Order total:</div>
+                    <div class="payment-summary-money">$52.51</div>
+                </div>
+
+                <button class="place-order-button button-primary">
+                    Place your order
+                </button>
+
+        `;
+        return priceHtml;
+    }
+    document.querySelector('.payment-js').innerHTML = price_grid();
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["jJIuQ","dedu1"], "dedu1", "parcelRequire233d", {}, "./", "/")
