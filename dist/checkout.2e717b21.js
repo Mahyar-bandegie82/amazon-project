@@ -768,12 +768,8 @@ function orderSummary() {
     let checkoutHtml = '';
     (0, _cartJs.cart).forEach((product_incart)=>{
         let productId = product_incart.productId;
-        let matchingItem = (0, _productsJs.products).find((product)=>{
-            return product.id === productId;
-        });
-        let deliveryOPTid = (0, _deliveryoptionsJs.deliveryOptions).find((item)=>{
-            return item.deliveryId === product_incart.deliveryOption;
-        });
+        let matchingItem = (0, _productsJs.getProduct)(productId);
+        let deliveryOPTid = (0, _deliveryoptionsJs.getDeliveryOPtion)(product_incart.deliveryOption);
         const today = (0, _dayjsDefault.default)();
         const deliveryDate = today.add(deliveryOPTid.deliveryDays, 'day').format('dddd, MMMM D');
         checkoutHtml += `
@@ -933,7 +929,14 @@ function saveDeliveryInfo(productId) {
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4sgkT":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getProduct", ()=>getProduct);
 parcelHelpers.export(exports, "products", ()=>products);
+function getProduct(productId) {
+    let product = products.find((product)=>{
+        return product.id === productId;
+    });
+    return product;
+}
 const products = [
     {
         id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -1725,6 +1728,7 @@ module.exports = module.bundle.resolve("men-cozy-fleece-zip-up-hoodie-red.6029dd
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "deliveryOptions", ()=>deliveryOptions);
+parcelHelpers.export(exports, "getDeliveryOPtion", ()=>getDeliveryOPtion);
 let deliveryOptions = [
     {
         deliveryId: "1",
@@ -1742,6 +1746,11 @@ let deliveryOptions = [
         priceCents: 999
     }
 ];
+function getDeliveryOPtion(deliveryId) {
+    return deliveryOptions.find((Option)=>{
+        return Option.deliveryId === deliveryId;
+    });
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7jGxJ":[function(require,module,exports,__globalThis) {
 !function(t, e) {
@@ -2117,14 +2126,11 @@ function renderPriceSummary() {
     let itemsInCart = 0;
     (0, _cartJs.cart).forEach((element)=>{
         itemsInCart += 1;
-        let productsInCart = (0, _productsJs.products).find((product)=>{
-            return product.id === element.productId;
-        });
-        totalProdPrice = totalProdPrice + productsInCart.priceCents;
-        let productDeliveryOpt = (0, _deliveryoptionsJs.deliveryOptions).find((opt)=>{
-            return opt.deliveryId === element.deliveryOption;
-        });
-        totalShipingPrice = totalShipingPrice + productDeliveryOpt.priceCents;
+        let productsInCart = (0, _productsJs.getProduct)(element.productId);
+        let ProdPrice = productsInCart.priceCents * element.quantity;
+        totalProdPrice += ProdPrice;
+        let productDeliveryOpt = (0, _deliveryoptionsJs.getDeliveryOPtion)(element.deliveryOption);
+        totalShipingPrice += productDeliveryOpt.priceCents;
     });
     let total = totalProdPrice + totalShipingPrice;
     let totalTax = total * 0.1;

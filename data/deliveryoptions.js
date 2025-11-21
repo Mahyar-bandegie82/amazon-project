@@ -15,3 +15,9 @@ export let deliveryOptions = [
         priceCents : 999
     }
 ]
+
+export function getDeliveryOPtion(deliveryId){
+    return deliveryOptions.find((Option)=>{
+        return Option.deliveryId === deliveryId
+    })
+}

@@ -884,7 +884,14 @@ exports.export = function(dest, destName, get) {
 },{}],"4sgkT":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getProduct", ()=>getProduct);
 parcelHelpers.export(exports, "products", ()=>products);
+function getProduct(productId) {
+    let product = products.find((product)=>{
+        return product.id === productId;
+    });
+    return product;
+}
 const products = [
     {
         id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",

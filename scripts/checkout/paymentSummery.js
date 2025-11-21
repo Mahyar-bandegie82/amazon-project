@@ -1,7 +1,7 @@
 import { cart } from "../../data/cart.js"
-import { products } from "../../data/products.js";
+import { products, getProduct } from "../../data/products.js";
 import { Money } from "../utils/money.js";
-import { deliveryOptions } from "../../data/deliveryoptions.js";
+import { deliveryOptions, getDeliveryOPtion } from "../../data/deliveryoptions.js";
 
 export default function renderPriceSummary(){
     let totalProdPrice = 0;
@@ -10,15 +10,12 @@ export default function renderPriceSummary(){
 
     cart.forEach((element) =>{
         itemsInCart += 1
-        let productsInCart = products.find((product) => {
-            return product.id === element.productId
-        })
-        totalProdPrice = totalProdPrice + productsInCart.priceCents;
+        let productsInCart = getProduct(element.productId);
+        let ProdPrice = productsInCart.priceCents * element.quantity;
+        totalProdPrice += ProdPrice
 
-        let productDeliveryOpt = deliveryOptions.find((opt)=>{
-            return opt.deliveryId === element.deliveryOption
-        })
-        totalShipingPrice = totalShipingPrice + productDeliveryOpt.priceCents
+        let productDeliveryOpt = getDeliveryOPtion(element.deliveryOption);
+        totalShipingPrice += productDeliveryOpt.priceCents;
     });
 
     let total = totalProdPrice + totalShipingPrice;

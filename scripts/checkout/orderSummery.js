@@ -1,7 +1,7 @@
 import { cart, removeProduct, saveDeliveryInfo } from "../../data/cart.js";
-import { products } from "../../data/products.js";
+import { products, getProduct } from "../../data/products.js";
 import { Money } from "../utils/money.js";
-import { deliveryOptions } from "../../data/deliveryoptions.js";
+import { deliveryOptions, getDeliveryOPtion } from "../../data/deliveryoptions.js";
 import renderPriceSummary from "./paymentSummery.js";
 import dayjs from "dayjs";
 
@@ -11,14 +11,10 @@ export default function orderSummary() {
     cart.forEach((product_incart) => {
         let productId = product_incart.productId;
 
-        let matchingItem = products.find((product) => {
-            return product.id === productId
-        })
+        let matchingItem = getProduct(productId)
 
-        let deliveryOPTid = deliveryOptions.find((item) => {
-            return item.deliveryId === product_incart.deliveryOption
-        })
-
+        let deliveryOPTid = getDeliveryOPtion(product_incart.deliveryOption)
+        
         const today = dayjs();
         const deliveryDate = today.add(deliveryOPTid.deliveryDays, 'day').format('dddd, MMMM D');
 
