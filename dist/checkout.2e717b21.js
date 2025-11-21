@@ -2127,8 +2127,7 @@ function renderPriceSummary() {
     (0, _cartJs.cart).forEach((element)=>{
         itemsInCart += 1;
         let productsInCart = (0, _productsJs.getProduct)(element.productId);
-        let ProdPrice = productsInCart.priceCents * element.quantity;
-        totalProdPrice += ProdPrice;
+        totalProdPrice += productsInCart.priceCents * element.quantity;
         let productDeliveryOpt = (0, _deliveryoptionsJs.getDeliveryOPtion)(element.deliveryOption);
         totalShipingPrice += productDeliveryOpt.priceCents;
     });

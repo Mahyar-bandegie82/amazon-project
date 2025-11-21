@@ -46,9 +46,9 @@
 83/home/mahyar/web-dev/frontend/js_projects/amazon-project/images/icons/cart-icon.png1763276820216010509 0
 92/home/mahyar/web-dev/frontend/js_projects/amazon-project/images/amazon-mobile-logo-white.png1763276820207650673 0
 63/home/mahyar/web-dev/frontend/js_projects/amazon-project/images1763276820243018178 1
-73/home/mahyar/web-dev/frontend/js_projects/amazon-project/data/products.js1763691392026086315 0
+73/home/mahyar/web-dev/frontend/js_projects/amazon-project/data/products.js1763693491434524931 0
 69/home/mahyar/web-dev/frontend/js_projects/amazon-project/data/cart.js1763537012077611166 0
-61/home/mahyar/web-dev/frontend/js_projects/amazon-project/data1763537012077611166 1
+61/home/mahyar/web-dev/frontend/js_projects/amazon-project/data1763693491434319011 1
 69/home/mahyar/web-dev/frontend/js_projects/amazon-project/package.json1763537003291610415 0
 64/home/mahyar/web-dev/frontend/js_projects/amazon-project/backend1763276820206004947 1
 67/home/mahyar/web-dev/frontend/js_projects/amazon-project/.gitignore1763537011689548727 0
@@ -57,11 +57,11 @@
 70/home/mahyar/web-dev/frontend/js_projects/amazon-project/styles/shared1763276820247075468 1
 91/home/mahyar/web-dev/frontend/js_projects/amazon-project/styles/pages/checkout/checkout.css1763276820246747584 0
 63/home/mahyar/web-dev/frontend/js_projects/amazon-project/styles1763276820246747584 1
-89/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout/orderSummery.js1763692484669465113 0
-73/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout1763683520569341143 1
+89/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout/orderSummery.js1763693491435983416 0
+73/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout1763693491435983416 1
 70/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/utils1763276820246326281 1
-76/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout.js1763683520569341143 0
-64/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts1763683520569341143 1
+76/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout.js1763693491435983416 0
+64/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts1763693491435983416 1
 89/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@lezer/lr/README.md1763537260245206102 0
 95/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@lezer/lr/dist/index.d.ts1763537260266208680 0
 97/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@lezer/lr/dist/constants.js1763537260194199841 0
@@ -1323,7 +1323,7 @@
 108/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/core/lib/public/BundleGraph.js1763537260485692681 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/TZ.js1763537261076077711 0
 117/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/transformer-html/lib/HTMLTransformer.js1763537260102188546 0
-61/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist1763693370882808731 1
+61/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist1763693659878919502 1
 110/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_async_to_generator.mjs1763537260874245252 0
 80/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dotenv/lib1763537260253207084 1
 103/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_await_value.mjs1763537260874760725 0
@@ -1674,7 +1674,7 @@
 96/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/picocolors/picocolors.d.ts1763537260136192720 0
 89/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/core/util.d.ts1763537260277210031 0
 99/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/profiler/src/types.js1763537260244205979 0
-73/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/orders.html1763692892046842225 0
+73/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/orders.html1763693491435983416 0
 90/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/core/Visitor.js1763537260159195544 0
 88/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/source-map1763537260648255578 1
 75/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@lmdb1763537261526346859 1
@@ -1750,7 +1750,7 @@
 105/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/_/_update/package.json1763537260843896182 0
 91/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/locale/es-pr.js1763537260503472640 0
 106/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/transformer-babel/src/jsx.js1763537260265208557 0
-87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/tracking.876b437a.css.map1763692892233785303 0
+87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/tracking.876b437a.css.map1763693491435983416 0
 113/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/cjs/_await_async_generator.cjs1763537260219202910 0
 91/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/ansi-styles/readme.md1763537260113189897 0
 90/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/reporter-cli1763537260327216169 1
@@ -1840,7 +1840,7 @@
 127/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_create_for_of_iterator_helper_loose.mjs1763537260883293266 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/FO.js1763537260756769988 0
 100/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/msgpackr/dist/index.min.js.map1763537260491236303 0
-92/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.afa0b06b.js.map1763692892217790174 0
+92/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.afa0b06b.js.map1763693491435172388 0
 106/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/core-linux-x64-gnu/package.json1763537260086186582 0
 121/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mdb_copy.c1763537260454231761 0
 77/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/globals1763537260165196281 1
@@ -1889,7 +1889,7 @@
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/utils/src/collection.js1763537260206201314 0
 103/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/facial-tissue-2-ply-18-boxes.f9d22af5.jpg1763692892050841008 0
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/midi.js1763537260882418208 0
-80/home/mahyar/web-dev/frontend/js_projects/amazon-project/data/deliveryoptions.js1763692058589386118 0
+80/home/mahyar/web-dev/frontend/js_projects/amazon-project/data/deliveryoptions.js1763693491434319011 0
 102/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/packager-js/package.json1763537260358219975 0
 93/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/transformer-css1763537260152194685 1
 125/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/_/_class_apply_descriptor_set/package.json1763537260650253993 0
@@ -2004,7 +2004,7 @@
 94/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/esm/_get.js1763537260571246125 0
 126/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/package-manager/test/fixtures/packages/peers-2.01763537260456232007 1
 106/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/esm/_read_only_error.js1763537260590137963 0
-85/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/orders.15cda061.css.map1763692892233785303 0
+85/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/orders.15cda061.css.map1763693491435983416 0
 79/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/type-fest1763537260266208680 1
 112/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/input-search.js1763537260817537008 0
 117/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_object_without_properties.mjs1763537260927289831 0
@@ -2050,7 +2050,7 @@
 107/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/esm/plugin/devHelper/index.d.ts1763537260818158773 0
 120/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/COPYRIGHT1763537260194199841 0
 107/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_read_only_error.mjs1763537260932856425 0
-72/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/index.html1763692892048841617 0
+72/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/index.html1763693491435983416 0
 97/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/plugin/package.json1763537260142193457 0
 100/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/core/lib/loadDotEnv.js1763537260585293076 0
 115/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/referrer-policy.js1763537261054686158 0
@@ -2103,7 +2103,7 @@
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_ts_generator.mjs1763537260975615464 0
 111/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/esm/_class_name_tdz_error.js1763537260512238882 0
 146/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/node-gyp-build-optional-packages/node_modules/detect-libc/lib/detect-libc.js1763537260122191001 0
-93/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.2103cff1.css.map1763692892233785303 0
+93/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.2103cff1.css.map1763693491434524931 0
 93/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/nullthrows/package.json1763537260069184495 0
 99/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/plugin/bigIntSupport.js1763537260353219361 0
 109/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/_/_class_private_field_set1763537260674214772 1
@@ -2133,7 +2133,7 @@
 118/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/cjs/_apply_decorated_descriptor.cjs1763537260101188423 0
 142/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/msgpackr-extract/node_modules/node-gyp-build-optional-packages/README.md1763537260162195912 0
 97/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/commander/typings/esm.d.mts1763537260306213591 0
-86/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.2e717b21.js.map1763693370882808731 0
+86/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.2e717b21.js.map1763693659878919502 0
 87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/bathroom-rug.d2dfd825.jpg1763692892087829745 0
 116/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/transformer-react-refresh-wrap/LICENSE1763537260074185109 0
 103/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/type-fest/source/stringified.d.ts1763537260385223290 0
@@ -2204,7 +2204,7 @@
 84/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/rating-10.e1160b1f.png1763692892202794740 0
 112/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/documenthead.js1763537260704794754 0
 89/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dotenv/package.json1763537260166196403 0
-93/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.629b1bf5.css.map1763692892233785303 0
+93/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.629b1bf5.css.map1763693491434524931 0
 120/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/runtime-js/src/helpers/worker/js-loader.js1763537260367221080 0
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/athletic-cotton-socks-6-pairs.1a365d02.jpg1763692892166805698 0
 96/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/plugin/timezone.d.ts1763537260842279395 0
@@ -2322,7 +2322,7 @@
 119/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/css-optional-pseudo.js1763537260640222504 0
 85/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/clone/clone.iml1763537260157195299 0
 90/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/msgpackr-extract/bin1763537260125191370 1
-82/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.2e717b21.js1763693370881808756 0
+82/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.2e717b21.js1763693659873919745 0
 117/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_skip_first_generator_next.mjs1763537260935785992 0
 121/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mdb_dump.c1763537260460232497 0
 106/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/tls1-1.js1763537261073109261 0
@@ -2346,14 +2346,14 @@
 105/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/6-piece-white-dinner-plate-set.7899302b.jpg1763692892049841312 0
 112/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/cjs/_wrap_async_generator.cjs1763537260490236180 0
 96/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/plugin/calendar.d.ts1763537260812328136 0
-75/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.html1763692892048841617 0
+75/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.html1763693491435983416 0
 110/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/filereader.js1763537260733758496 0
 122/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/msgpackr-extract/node_modules/detect-libc/index.d.ts1763537260194199841 0
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/cjs/_to_primitive.cjs1763537260475234339 0
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/opus.js1763537261027231618 0
 122/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/cjs/_class_extract_field_descriptor.cjs1763537260295212241 0
 90/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/globals/globals.json1763537260137192843 0
-89/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.629b1bf5.css1763692892229786521 0
+89/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.629b1bf5.css1763693491434524931 0
 91/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/commander/lib/help.js1763537260204201068 0
 106/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/esm/plugin/isLeapYear/index.js1763537260611746214 0
 108/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/lazyload.js1763537260850280377 0
@@ -2544,7 +2544,7 @@
 109/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/packager-css/src/CSSPackager.js1763537260142193457 0
 116/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_interop_require_wildcard.mjs1763537260905305679 0
 107/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/src/_super_prop_base.mjs1763537260943291795 0
-89/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.2103cff1.css1763692892229786521 0
+89/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.2103cff1.css1763693491434524931 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/TL.js1763537261073109261 0
 129/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_copy.11763537260373221816 0
 95/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/feature-flags/src1763537260161195790 1
@@ -2584,7 +2584,7 @@
 88/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/locale/lt.js1763537260700397224 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/helpers/_/_new_arrow_check1763537260779849514 1
 84/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/rating-05.18c2d816.png1763692892202794740 0
-87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.9237cb91.css.map1763692892233785303 0
+87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.9237cb91.css.map1763693491435983416 0
 100/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/semver/functions/prerelease.js1763537260349218870 0
 79/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/util1763537260649484297 1
 114/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/node-gyp-build-optional-packages/optional.js1763537260125191370 0
@@ -2754,7 +2754,7 @@
 91/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/counter/index.js1763537260072184863 0
 115/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/offscreencanvas.js1763537261006299361 0
 98/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/type-fest/source/except.d.ts1763537260246206225 0
-75/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/tracking.html1763692892183800523 0
+75/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/tracking.html1763693491435983416 0
 103/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lz4/lib/LICENSE1763537260306213591 0
 97/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/type-fest/source/basic.d.ts1763537260171197017 0
 92/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/plugin/minMax.js1763537260703262330 0
@@ -2892,7 +2892,7 @@
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/dist/lib/supported.js1763537261066815966 0
 122/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/viewport-unit-variants.js1763537261087910432 0
 108/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/type-fest/source/iterable-element.d.ts1763537260280210399 0
-70/home/mahyar/web-dev/frontend/js_projects/amazon-project/checkout.html1763683520562373267 0
+70/home/mahyar/web-dev/frontend/js_projects/amazon-project/checkout.html1763693491434319011 0
 90/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@swc/core/spack.d.ts1763537260269209049 0
 87/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/commander/LICENSE1763537260072184863 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/LU.js1763537260870062326 0
@@ -2946,7 +2946,7 @@
 82/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/locale1763537260851280500 1
 126/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/msgpackr-extract/node_modules/detect-libc/lib/process.js1763537260163196035 0
 100/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/javascript-amazon-project.2103cff1.css1763464507965849186 0
-56/home/mahyar/web-dev/frontend/js_projects/amazon-project1763683520562001878 1
+56/home/mahyar/web-dev/frontend/js_projects/amazon-project1763693491434319011 1
 125/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/package-manager/test/NodePackageManager.test.js1763537260416227096 0
 116/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/childnode-remove.js1763537260555244161 0
 121/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/constraint-validation.js1763537260573846430 0
@@ -3431,7 +3431,7 @@
 88/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/json5/lib/parse.js1763537260223203401 0
 102/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/packager-js/src/utils.js1763537260346218502 0
 108/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/testfeat.js1763537261070590165 0
-91/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout/paymentSummery.js1763693370816207385 0
+91/home/mahyar/web-dev/frontend/js_projects/amazon-project/scripts/checkout/paymentSummery.js1763693624077587262 0
 91/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/locale/de-at.js1763537260448231024 0
 117/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/watcher/src/watchman/WatchmanBackend.cc1763537260307213714 0
 103/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/sxg.js1763537261069391489 0
@@ -3540,7 +3540,7 @@
 129/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb-data-v1/libraries/liblmdb/mdb_load.11763537260404225622 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/MT.js1763537260904701739 0
 99/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/packager-wasm/LICENSE1763537260076185354 0
-89/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.b2ebe47e.css1763692892229786521 0
+89/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.b2ebe47e.css1763693491435172388 0
 112/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/css3-tabsize.js1763537260673606045 0
 111/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/flexbox-gap.js1763537260753986271 0
 104/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/avif.js1763537260442230288 0
@@ -3639,7 +3639,7 @@
 116/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/css-color-adjust.js1763537260596182265 0
 126/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb-data-v1/libraries/liblmdb/tooltag1763537260368221203 0
 118/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/screen-orientation.js1763537261058950167 0
-93/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.b2ebe47e.css.map1763692892233785303 0
+93/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.b2ebe47e.css.map1763693491435172388 0
 105/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/xhtml.js1763537261107991906 0
 115/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/getrandomvalues.js1763537260773794909 0
 124/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/wasm-nontrapping-fptoint.js1763537261094307399 0
@@ -3998,7 +3998,7 @@
 103/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/workers/lib/WorkerFarm.js1763537260430228815 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/CZ.js1763537260687260366 0
 113/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/workers/src/process/ProcessChild.js1763537260357219852 0
-87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.50e70524.css.map1763692892233785303 0
+87/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/checkout.50e70524.css.map1763693491435983416 0
 101/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/regions/ML.js1763537260883293266 0
 119/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/Doxyfile1763537260267208803 0
 94/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/packager-css/lib1763537260093187441 1
@@ -4213,7 +4213,7 @@
 111/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/types-internal/src/SemverRange.js1763537260257207576 0
 98/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/dayjs/plugin/arraySupport.js1763537260317214941 0
 107/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/package-manager/test/fixtures1763537260436604019 1
-88/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.afa0b06b.js1763692892210792305 0
+88/home/mahyar/web-dev/frontend/js_projects/amazon-project/dist/amazon-project.afa0b06b.js1763693491434921490 0
 112/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/caniuse-lite/data/features/imagecapture.js1763537260801438159 0
 106/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/types-internal/src/unsafe.js1763537260264208435 0
 105/home/mahyar/web-dev/frontend/js_projects/amazon-project/node_modules/@parcel/rust-linux-x64-musl/LICENSE1763537260075185231 0

@@ -11,8 +11,7 @@ export default function renderPriceSummary(){
     cart.forEach((element) =>{
         itemsInCart += 1
         let productsInCart = getProduct(element.productId);
-        let ProdPrice = productsInCart.priceCents * element.quantity;
-        totalProdPrice += ProdPrice
+        totalProdPrice += productsInCart.priceCents * element.quantity;
 
         let productDeliveryOpt = getDeliveryOPtion(element.deliveryOption);
         totalShipingPrice += productDeliveryOpt.priceCents;
