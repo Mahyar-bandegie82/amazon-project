@@ -2,6 +2,7 @@ import { cart, removeProduct, saveDeliveryInfo } from "../../data/cart.js";
 import { products } from "../../data/products.js";
 import { Money } from "../utils/money.js";
 import { deliveryOptions } from "../../data/deliveryoptions.js";
+import renderPriceSummary from "./paymentSummery.js";
 import dayjs from "dayjs";
 
 export default function orderSummary() {
@@ -71,8 +72,6 @@ export default function orderSummary() {
 
             const isChecked = product_incart.deliveryOption === option.deliveryId;
 
-            console.log(isChecked);
-
             delopt = delopt + `
             <div class="delivery-option-js">
                 <label class="delivery-option">
@@ -105,6 +104,7 @@ export default function orderSummary() {
                 }
             })
             orderSummary()
+            renderPriceSummary()
         });
     });
 
@@ -114,6 +114,7 @@ export default function orderSummary() {
     document.querySelectorAll('.js-delete').forEach((btn) => {
         btn.addEventListener('click', () => {
             removeProduct(btn.dataset.delete)
+            renderPriceSummary()
         })
     })
 

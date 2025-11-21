@@ -760,6 +760,8 @@ var _cartJs = require("../../data/cart.js");
 var _productsJs = require("../../data/products.js");
 var _moneyJs = require("../utils/money.js");
 var _deliveryoptionsJs = require("../../data/deliveryoptions.js");
+var _paymentSummeryJs = require("./paymentSummery.js");
+var _paymentSummeryJsDefault = parcelHelpers.interopDefault(_paymentSummeryJs);
 var _dayjs = require("dayjs");
 var _dayjsDefault = parcelHelpers.interopDefault(_dayjs);
 function orderSummary() {
@@ -820,7 +822,6 @@ function orderSummary() {
             const deliveryDate = today.add(option.deliveryDays, 'day').format('dddd, MMMM D');
             const deliveryPrice = option.priceCents === 0 ? 'FREE Shipping' : `$${(0, _moneyJs.Money)(option.priceCents)} - Shipping`;
             const isChecked = product_incart.deliveryOption === option.deliveryId;
-            console.log(isChecked);
             delopt = delopt + `
             <div class="delivery-option-js">
                 <label class="delivery-option">
@@ -848,12 +849,14 @@ function orderSummary() {
                 if (item.productId === dataset) (0, _cartJs.saveDeliveryInfo)(dataset);
             });
             orderSummary();
+            (0, _paymentSummeryJsDefault.default)();
         });
     });
     //my code
     document.querySelectorAll('.js-delete').forEach((btn)=>{
         btn.addEventListener('click', ()=>{
             (0, _cartJs.removeProduct)(btn.dataset.delete);
+            (0, _paymentSummeryJsDefault.default)();
         });
     });
 //ai code
@@ -876,7 +879,7 @@ function orderSummary() {
 // });
 }
 
-},{"../../data/cart.js":"aivgC","../../data/products.js":"4sgkT","../../data/deliveryoptions.js":"le6Ya","dayjs":"7jGxJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../utils/money.js":"aBhv2"}],"aivgC":[function(require,module,exports,__globalThis) {
+},{"../../data/cart.js":"aivgC","../../data/products.js":"4sgkT","../../data/deliveryoptions.js":"le6Ya","dayjs":"7jGxJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../utils/money.js":"aBhv2","./paymentSummery.js":"hGLsy"}],"aivgC":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "cart", ()=>cart);
@@ -2104,37 +2107,57 @@ function Money(price) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>renderPriceSummary);
-let priceHtml = '';
+var _cartJs = require("../../data/cart.js");
+var _productsJs = require("../../data/products.js");
+var _moneyJs = require("../utils/money.js");
+var _deliveryoptionsJs = require("../../data/deliveryoptions.js");
 function renderPriceSummary() {
+    let totalProdPrice = 0;
+    let totalShipingPrice = 0;
+    let itemsInCart = 0;
+    (0, _cartJs.cart).forEach((element)=>{
+        itemsInCart += 1;
+        let productsInCart = (0, _productsJs.products).find((product)=>{
+            return product.id === element.productId;
+        });
+        totalProdPrice = totalProdPrice + productsInCart.priceCents;
+        let productDeliveryOpt = (0, _deliveryoptionsJs.deliveryOptions).find((opt)=>{
+            return opt.deliveryId === element.deliveryOption;
+        });
+        totalShipingPrice = totalShipingPrice + productDeliveryOpt.priceCents;
+    });
+    let total = totalProdPrice + totalShipingPrice;
+    let totalTax = total * 0.1;
+    let totalWithTax = total + totalTax;
     function price_grid() {
-        priceHtml = priceHtml + `
+        const priceHtml = `
             <div class="payment-summary-title">
-                    Order Summary
+                    Order Summary</
                 </div>
 
                 <div class="payment-summary-row">
-                    <div>Items (3):</div>
-                    <div class="payment-summary-money">$42.75</div>
+                    <div>Items (${itemsInCart}):</div>
+                    <div class="payment-summary-money">$${(0, _moneyJs.Money)(totalProdPrice)}</div>
                 </div>
 
                 <div class="payment-summary-row">
                     <div>Shipping &amp; handling:</div>
-                    <div class="payment-summary-money">$4.99</div>
+                    <div class="payment-summary-money">$${(0, _moneyJs.Money)(totalShipingPrice)}</div>
                 </div>
 
                 <div class="payment-summary-row subtotal-row">
                     <div>Total before tax:</div>
-                    <div class="payment-summary-money">$47.74</div>
+                    <div class="payment-summary-money">$${(0, _moneyJs.Money)(total)}</div>
                 </div>
 
                 <div class="payment-summary-row">
                     <div>Estimated tax (10%):</div>
-                    <div class="payment-summary-money">$4.77</div>
+                    <div class="payment-summary-money">$${(0, _moneyJs.Money)(totalTax)}</div>
                 </div>
 
                 <div class="payment-summary-row total-row">
                     <div>Order total:</div>
-                    <div class="payment-summary-money">$52.51</div>
+                    <div class="payment-summary-money">$${(0, _moneyJs.Money)(totalWithTax)}</div>
                 </div>
 
                 <button class="place-order-button button-primary">
@@ -2147,6 +2170,6 @@ function renderPriceSummary() {
     document.querySelector('.payment-js').innerHTML = price_grid();
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["jJIuQ","dedu1"], "dedu1", "parcelRequire233d", {}, "./", "/")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../../data/cart.js":"aivgC","../../data/products.js":"4sgkT","../utils/money.js":"aBhv2","../../data/deliveryoptions.js":"le6Ya"}]},["jJIuQ","dedu1"], "dedu1", "parcelRequire233d", {}, "./", "/")
 
 //# sourceMappingURL=checkout.2e717b21.js.map
